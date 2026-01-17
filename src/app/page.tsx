@@ -218,19 +218,50 @@ export default function Home() {
             <p className="text-sm text-muted-foreground">Colors at different opacity levels</p>
           </div>
           <div className="space-y-4 rounded-lg border border-border bg-card p-6">
-            {["primary", "secondary", "accent", "destructive"].map((color) => (
-              <div key={color} className="space-y-2">
-                <p className="text-sm font-semibold text-card-foreground">{color}</p>
-                <div className="flex gap-2">
-                  <div className={`h-16 flex-1 rounded bg-${color}/10 flex items-center justify-center text-xs`}>10%</div>
-                  <div className={`h-16 flex-1 rounded bg-${color}/20 flex items-center justify-center text-xs`}>20%</div>
-                  <div className={`h-16 flex-1 rounded bg-${color}/40 flex items-center justify-center text-xs`}>40%</div>
-                  <div className={`h-16 flex-1 rounded bg-${color}/60 flex items-center justify-center text-xs`}>60%</div>
-                  <div className={`h-16 flex-1 rounded bg-${color}/80 flex items-center justify-center text-xs`}>80%</div>
-                  <div className={`h-16 flex-1 rounded bg-${color} flex items-center justify-center text-xs text-${color}-foreground`}>100%</div>
-                </div>
+            <div className="space-y-2">
+              <p className="text-sm font-semibold text-card-foreground">primary</p>
+              <div className="flex gap-2">
+                <div className="h-16 flex-1 rounded bg-primary/10 flex items-center justify-center text-xs">10%</div>
+                <div className="h-16 flex-1 rounded bg-primary/20 flex items-center justify-center text-xs">20%</div>
+                <div className="h-16 flex-1 rounded bg-primary/40 flex items-center justify-center text-xs">40%</div>
+                <div className="h-16 flex-1 rounded bg-primary/60 flex items-center justify-center text-xs">60%</div>
+                <div className="h-16 flex-1 rounded bg-primary/80 flex items-center justify-center text-xs">80%</div>
+                <div className="h-16 flex-1 rounded bg-primary flex items-center justify-center text-xs text-primary-foreground">100%</div>
               </div>
-            ))}
+            </div>
+            <div className="space-y-2">
+              <p className="text-sm font-semibold text-card-foreground">secondary</p>
+              <div className="flex gap-2">
+                <div className="h-16 flex-1 rounded bg-secondary/10 flex items-center justify-center text-xs">10%</div>
+                <div className="h-16 flex-1 rounded bg-secondary/20 flex items-center justify-center text-xs">20%</div>
+                <div className="h-16 flex-1 rounded bg-secondary/40 flex items-center justify-center text-xs">40%</div>
+                <div className="h-16 flex-1 rounded bg-secondary/60 flex items-center justify-center text-xs">60%</div>
+                <div className="h-16 flex-1 rounded bg-secondary/80 flex items-center justify-center text-xs">80%</div>
+                <div className="h-16 flex-1 rounded bg-secondary flex items-center justify-center text-xs text-secondary-foreground">100%</div>
+              </div>
+            </div>
+            <div className="space-y-2">
+              <p className="text-sm font-semibold text-card-foreground">accent</p>
+              <div className="flex gap-2">
+                <div className="h-16 flex-1 rounded bg-accent/10 flex items-center justify-center text-xs">10%</div>
+                <div className="h-16 flex-1 rounded bg-accent/20 flex items-center justify-center text-xs">20%</div>
+                <div className="h-16 flex-1 rounded bg-accent/40 flex items-center justify-center text-xs">40%</div>
+                <div className="h-16 flex-1 rounded bg-accent/60 flex items-center justify-center text-xs">60%</div>
+                <div className="h-16 flex-1 rounded bg-accent/80 flex items-center justify-center text-xs">80%</div>
+                <div className="h-16 flex-1 rounded bg-accent flex items-center justify-center text-xs text-accent-foreground">100%</div>
+              </div>
+            </div>
+            <div className="space-y-2">
+              <p className="text-sm font-semibold text-card-foreground">destructive</p>
+              <div className="flex gap-2">
+                <div className="h-16 flex-1 rounded bg-destructive/10 flex items-center justify-center text-xs">10%</div>
+                <div className="h-16 flex-1 rounded bg-destructive/20 flex items-center justify-center text-xs">20%</div>
+                <div className="h-16 flex-1 rounded bg-destructive/40 flex items-center justify-center text-xs">40%</div>
+                <div className="h-16 flex-1 rounded bg-destructive/60 flex items-center justify-center text-xs">60%</div>
+                <div className="h-16 flex-1 rounded bg-destructive/80 flex items-center justify-center text-xs">80%</div>
+                <div className="h-16 flex-1 rounded bg-destructive flex items-center justify-center text-xs text-destructive-foreground">100%</div>
+              </div>
+            </div>
           </div>
         </section>
 
