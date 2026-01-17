@@ -1,5 +1,6 @@
 {
-  "welcome": "أهلا وسهلا بك في Sastify",  "header": {
+  "welcome": "أهلا وسهلا بك في Sastify",
+  "header": {
     "home": "الرئيسية",
     "features": "المميزات",
     "pricing": "الأسعار",
@@ -7,7 +8,8 @@
     "contact": "تواصل معنا",
     "tryNow": "جرب الآن",
     "learnNow": "تعلم الآن"
-  },  "theme": {
+  },
+  "theme": {
     "light": "الوضع الفاتح",
     "dark": "الوضع الداكن",
     "system": "النظام"

@@ -1,5 +1,6 @@
 {
-  "welcome": "Welcome to Sastify",  "header": {
+  "welcome": "Welcome to Sastify",
+  "header": {
     "home": "Home",
     "features": "Features",
     "pricing": "Pricing",
@@ -7,7 +8,8 @@
     "contact": "Contact us",
     "tryNow": "Try now",
     "learnNow": "Learn now"
-  },  "theme": {
+  },
+  "theme": {
     "light": "Light Mode",
     "dark": "Dark Mode",
     "system": "System"
