@@ -70,16 +70,18 @@
 }
 
 /* PALETTE REFERENCE
-  Blue-400: #495584 (New Secondary/Accent)
-  Blue-800: #0f1838 (Card BG)
+  Light Mode Adjustments:
+  - Muted:     Blue-100 (#b8bdcf)
+  - Secondary: Blue-300 (#667198) [Visible against Muted]
+  - Accent:    Blue-300 (#667198) [Visible against Muted]
 */
 
 :root {
   --radius: 0.625rem;
 
   /* LIGHT MODE */
-  --background: #e8eaf0;
-  --foreground: #0b122a;
+  --background: #e8eaf0; /* Blue-50 */
+  --foreground: #0b122a; /* Blue-900 */
 
   --card: #ffffff;
   --card-foreground: #0b122a;
@@ -87,24 +89,26 @@
   --popover: #ffffff;
   --popover-foreground: #0b122a;
 
-  --primary: #1b2b65;
+  --primary: #1b2b65;    /* Blue-500 */
   --primary-foreground: #ffffff;
 
-  --secondary: #b8bdcf;
-  --secondary-foreground: #1b2b65;
+  /* UPDATED: Secondary bumped to Blue-300 for better visibility */
+  --secondary: #667198;  /* Blue-300 */
+  --secondary-foreground: #ffffff; /* White text for contrast */
 
-  --muted: #b8bdcf;
-  --muted-foreground: #495584;
+  --muted: #b8bdcf;      /* Blue-100 */
+  --muted-foreground: #495584; /* Blue-400 */
 
-  --accent: #b8bdcf;
-  --accent-foreground: #1b2b65;
+  /* UPDATED: Accent bumped to Blue-300 */
+  --accent: #667198;     /* Blue-300 */
+  --accent-foreground: #ffffff; /* White text */
 
-  --destructive: #cd202f;
+  --destructive: #cd202f; /* Red-500 */
   --destructive-foreground: #ffffff;
 
-  --border: #b8bdcf;
-  --input: #b8bdcf;
-  --ring: #1b2b65;
+  --border: #b8bdcf;     /* Blue-100 */
+  --input: #b8bdcf;      /* Blue-100 */
+  --ring: #1b2b65;       /* Blue-500 */
 
   --chart-1: #1b2b65;
   --chart-2: #cd202f;
@@ -136,14 +140,12 @@
   --primary: #667198;    /* Blue-300 */
   --primary-foreground: #ffffff;
 
-  /* UPDATED: Secondary bumped to Blue-400 (#495584) for visibility on Blue-800 Card */
   --secondary: #495584;  /* Blue-400 */
-  --secondary-foreground: #ffffff; /* White text on lighter background */
+  --secondary-foreground: #ffffff;
 
   --muted: #131f48;      /* Blue-700 */
   --muted-foreground: #b8bdcf; /* Blue-100 */
 
-  /* UPDATED: Accent bumped to Blue-400 (#495584) */
   --accent: #495584;     /* Blue-400 */
   --accent-foreground: #ffffff;
 
