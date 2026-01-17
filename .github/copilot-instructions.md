@@ -10,6 +10,7 @@ Next.js 16.1.3 application using React 19, TypeScript, and Tailwind CSS v4 with 
 - **Styling**: Tailwind CSS v4 (using new `@import "tailwindcss"` syntax)
 - **UI Components**: shadcn/ui with Radix UI primitives + Aceternity UI
 - **Theming**: `next-themes` for dark/light/system modes
+- **Internationalization**: `next-intl` for locale routing and translations (en/ar)
 - **Icons**: `lucide-react`
 - **Animations**: `framer-motion` + `tw-animate-css` (Aceternity UI animations integrated)
 - **Utilities**: `clsx`, `tailwind-merge`, `class-variance-authority`
@@ -39,6 +40,46 @@ Key conventions:
 - Always use `cn()` utility (never raw `className`)
 - Client components must have `"use client"` directive
 
+### Internationalization Architecture
+
+**Critical: Locale-based routing with `next-intl`**
+
+The app uses `[locale]` dynamic segments for all pages. Root layout at [src/app/layout.tsx](src/app/layout.tsx) is a **pass-through** - actual layout logic lives in [src/app/[locale]/layout.tsx](src/app/[locale]/layout.tsx).
+
+**Middleware configuration** ([src/proxy.ts](src/proxy.ts)):
+```tsx
+export const proxy = createMiddleware({
+  locales: ["en", "ar"],
+  defaultLocale: "en",
+  localePrefix: "as-needed",  // /en omitted for default locale
+});
+```
+
+**Translation setup** ([src/i18n.ts](src/i18n.ts)):
+- Messages loaded from `src/messages/{locale}.json`
+- Validates locale against `["en", "ar"]`, falls back to `"en"`
+- Server-side import using dynamic `import()`
+
+**Locale-specific layout** ([src/app/[locale]/layout.tsx](src/app/[locale]/layout.tsx)):
+```tsx
+const { locale } = await params;  // Extract from async params
+<html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
+  <body className={locale === "ar" ? "font-tajawal" : "font-poppins"}>
+    <NextIntlClientProvider messages={messages} locale={locale}>
+```
+
+Key patterns:
+- Use `useTranslations()` hook in client components: `const t = useTranslations(); t("welcome")`
+- Use `getMessages()` server function for SSR
+- Use `useLocale()` to get current locale
+- Language switcher pattern: Strip old locale prefix, prepend new one ([language-switcher.tsx](src/components/language-switcher.tsx))
+
+**Font configuration for RTL**:
+- Poppins for English (`font-poppins`)
+- Tajawal for Arabic (`font-tajawal`)
+- Fonts switched via body className based on locale
+- Always set `dir` attribute on `<html>` for RTL support
+
 ### Theme System
 
 Theme managed via `next-themes` wrapped in [src/components/theme-provider.tsx](src/components/theme-provider.tsx):
@@ -66,11 +107,14 @@ When adding theme-aware components:
 
 ### Fonts
 
-Geist Sans & Geist Mono loaded via `next/font/google` in [src/app/layout.tsx](src/app/layout.tsx):
+**Locale-aware font loading** in [src/app/[locale]/layout.tsx](src/app/[locale]/layout.tsx):
 ```tsx
-const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] })
-// Applied to body via className={`${geistSans.variable} ${geistMono.variable}`}
+const poppins = Poppins({ variable: "--font-poppins", weight: ["400", "500", "600", "700"] })
+const tajawal = Tajawal({ variable: "--font-tajawal", weight: ["400", "500", "700"] })
+// Applied: className={locale === "ar" ? "font-tajawal" : "font-poppins"}
 ```
+
+**Note**: Root layout uses Geist fonts for fallback, but locale layout overrides with Poppins/Tajawal.
 
 ## Development Workflows
 
@@ -107,11 +151,15 @@ When adding new shadcn/ui components:
 ```
 src/
 ├── app/              # Next.js App Router (pages, layouts, globals.css)
+│   └── [locale]/    # Locale-specific routes (en/ar)
 ├── components/
 │   ├── ui/          # shadcn/ui components (Radix-based)
-│   └── *.tsx        # Custom components (theme-provider, theme-toggle)
-└── lib/
-    └── utils.ts     # cn() utility and shared helpers
+│   └── *.tsx        # Custom components (theme-provider, language-switcher)
+├── lib/
+│   └── utils.ts     # cn() utility and shared helpers
+├── messages/         # i18n translation files (en.json, ar.json)
+├── i18n.ts          # next-intl configuration
+└── proxy.ts         # Middleware for locale routing
 ```
 
 ## Testing & Deployment

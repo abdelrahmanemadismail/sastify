@@ -1,0 +1,18 @@
+{
+  "welcome": "أهلا وسهلا بك في Sastify",  "header": {
+    "home": "الرئيسية",
+    "features": "المميزات",
+    "pricing": "الأسعار",
+    "education": "التعليم",
+    "contact": "تواصل معنا",
+    "tryNow": "جرب الآن",
+    "learnNow": "تعلم الآن"
+  },  "theme": {
+    "light": "الوضع الفاتح",
+    "dark": "الوضع الداكن",
+    "system": "النظام"
+  },
+  "language": "اللغة",
+  "english": "English",
+  "arabic": "العربية"
+}
