@@ -4,7 +4,7 @@ import { useState } from "react"
 import { useTranslations } from "next-intl"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
-import { motion } from "framer-motion"
+import { motion, type Variants } from "framer-motion"
 import { Mail, User, Building2, Briefcase, CheckCircle2, AlertCircle, Sparkles } from "lucide-react"
 
 interface WaitingListFormData {
@@ -112,21 +112,21 @@ export function WaitingListForm({ onSuccess }: WaitingListFormProps) {
     }
   }
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5, ease: "easeOut" },
+      transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
     },
   }
 
-  const fieldVariants = {
+  const fieldVariants: Variants = {
     hidden: { opacity: 0, x: -20 },
     visible: (i: number) => ({
       opacity: 1,
       x: 0,
-      transition: { delay: i * 0.1, duration: 0.4 },
+      transition: { delay: i * 0.1, duration: 0.4, ease: [0.22, 1, 0.36, 1] },
     }),
   }
 
