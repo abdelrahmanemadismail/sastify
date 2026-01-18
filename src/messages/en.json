@@ -142,5 +142,34 @@
       "validationFailed": "Please fix the errors above",
       "submissionFailed": "Failed to send message. Please try again."
     }
+  },
+  "waitingList": {
+    "title": "Join Our Waiting List",
+    "subtitle": "Be the first to experience SASTify's powerful security features",
+    "description": "We're excited to have you join our community. We'll keep you updated with exclusive early access opportunities and product updates.",
+    "form": {
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "Enter your full name",
+      "email": "Email Address",
+      "emailPlaceholder": "Enter your email address",
+      "company": "Company Name",
+      "companyPlaceholder": "Enter your company name",
+      "position": "Job Position",
+      "positionPlaceholder": "Enter your job position",
+      "joinWaitingList": "Join Waiting List",
+      "submitting": "Joining...",
+      "privacyNotice": "We respect your privacy. Your information will only be used to contact you about SASTify."
+    },
+    "errors": {
+      "nameRequired": "Full name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Please enter a valid email address",
+      "companyRequired": "Company name is required",
+      "positionRequired": "Job position is required",
+      "submissionFailed": "Failed to join waiting list. Please try again."
+    },
+    "success": {
+      "message": "Thank you! You've been added to our waiting list. Check your email for updates."
+    }
   }
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
@@ -83,13 +84,15 @@ export function HeroSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
               >
-                <Button
-                  size="lg"
-                  className="bg-red-600 hover:bg-red-700 text-white px-8 py-6 text-lg rounded-full shadow-lg shadow-red-500/20 hover:shadow-red-500/40 transition-all"
-                >
-                  {t("hero.cta")}
-                  <Download className="ml-2 h-5 w-5" />
-                </Button>
+                <Link href="/waiting-list">
+                  <Button
+                    size="lg"
+                    className="bg-red-600 hover:bg-red-700 text-white px-8 py-6 text-lg rounded-full shadow-lg shadow-red-500/20 hover:shadow-red-500/40 transition-all"
+                  >
+                    {t("hero.cta")}
+                    <Download className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
               </motion.div>
             </div>
 

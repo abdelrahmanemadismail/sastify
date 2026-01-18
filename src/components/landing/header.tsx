@@ -32,10 +32,10 @@ export function Header() {
 
   const navLinks = [
     { name: t("home"), href: "/" },
-    { name: t("features"), href: "#features" },
-    { name: t("pricing"), href: "#pricing" },
-    { name: t("education"), href: "#education" },
-    { name: t("contact"), href: "#contact" },
+    { name: t("features"), href: "/#features" },
+    { name: t("pricing"), href: "/#pricing" },
+    { name: t("education"), href: "/#education" },
+    { name: t("contact"), href: "/#contact" },
   ];
 
   return (
@@ -87,40 +87,44 @@ export function Header() {
           <LanguageSwitcher />
 
           {/* 'Try now' - Blue gradient button from Figma */}
-          <Button
-            className={cn(
-              "rounded-full px-5 py-2 text-sm font-medium",
-              "w-auto h-auto",
-              "flex flex-row justify-center items-center gap-2.5",
-              "bg-linear-to-r",
-              "from-[#0A0C1C] to-[#1B2371]",
-              "text-white",
-              "border border-[#1B2371]",
-              "shadow-[0px_4px_25px_rgba(27,35,113,0.5),inset_4px_4px_4px_rgba(185,180,255,0.3)]",
-              "hover:shadow-[0px_6px_30px_rgba(27,35,113,0.6),inset_4px_4px_4px_rgba(185,180,255,0.4)]",
-              "transition-all duration-300"
-            )}
-          >
-            {t("tryNow")}
-          </Button>
+          <Link href="/waiting-list">
+            <Button
+              className={cn(
+                "rounded-full px-5 py-2 text-sm font-medium",
+                "w-auto h-auto",
+                "flex flex-row justify-center items-center gap-2.5",
+                "bg-linear-to-r",
+                "from-[#0A0C1C] to-[#1B2371]",
+                "text-white",
+                "border border-[#1B2371]",
+                "shadow-[0px_4px_25px_rgba(27,35,113,0.5),inset_4px_4px_4px_rgba(185,180,255,0.3)]",
+                "hover:shadow-[0px_6px_30px_rgba(27,35,113,0.6),inset_4px_4px_4px_rgba(185,180,255,0.4)]",
+                "transition-all duration-300"
+              )}
+            >
+              {t("tryNow")}
+            </Button>
+          </Link>
 
           {/* 'Learn now' - Gradient button from Figma */}
-          <Button
-            className={cn(
-              "rounded-full px-5 py-2 text-sm font-medium",
-              "w-auto h-auto",
-              "flex flex-row justify-center items-center gap-2.5",
-              "bg-linear-to-r",
-              "from-[#0A0C1F] to-[#CD202F]",
-              "text-white",
-              "border border-[#CD202F]",
-              "shadow-[0px_4px_25px_rgba(27,35,113,0.5),inset_4px_4px_4px_rgba(185,180,255,0.3)]",
-              "hover:shadow-[0px_6px_30px_rgba(27,35,113,0.6),inset_4px_4px_4px_rgba(185,180,255,0.4)]",
-              "transition-all duration-300"
-            )}
-          >
-            {t("learnNow")}
-          </Button>
+          <Link href="/waiting-list">
+            <Button
+              className={cn(
+                "rounded-full px-5 py-2 text-sm font-medium",
+                "w-auto h-auto",
+                "flex flex-row justify-center items-center gap-2.5",
+                "bg-linear-to-r",
+                "from-[#0A0C1F] to-[#CD202F]",
+                "text-white",
+                "border border-[#CD202F]",
+                "shadow-[0px_4px_25px_rgba(27,35,113,0.5),inset_4px_4px_4px_rgba(185,180,255,0.3)]",
+                "hover:shadow-[0px_6px_30px_rgba(27,35,113,0.6),inset_4px_4px_4px_rgba(185,180,255,0.4)]",
+                "transition-all duration-300"
+              )}
+            >
+              {t("learnNow")}
+            </Button>
+          </Link>
         </div>
 
         {/* Mobile Menu Trigger */}
@@ -151,24 +155,28 @@ export function Header() {
                 </div>
 
                 <div className="flex flex-col gap-4 mt-4 w-full max-w-xs">
-                  <Button className={cn(
-                    "w-full rounded-full px-5 py-2 text-sm font-medium",
-                    "bg-linear-to-r from-[#0A0C1C] to-[#1B2371]",
-                    "text-white",
-                    "border border-[#1B2371]",
-                    "shadow-[0px_4px_25px_rgba(27,35,113,0.5),inset_4px_4px_4px_rgba(185,180,255,0.3)]",
-                    "hover:shadow-[0px_6px_30px_rgba(27,35,113,0.6),inset_4px_4px_4px_rgba(185,180,255,0.4)]",
-                    "transition-all duration-300"
-                  )}>{t("tryNow")}</Button>
-                  <Button className={cn(
-                    "w-full rounded-full px-5 py-2 text-sm font-medium",
-                    "bg-linear-to-r from-[#0A0C1F] to-[#CD202F]",
-                    "text-white",
-                    "border border-[#CD202F]",
-                    "shadow-[0px_4px_25px_rgba(27,35,113,0.5),inset_4px_4px_4px_rgba(185,180,255,0.3)]",
-                    "hover:shadow-[0px_6px_30px_rgba(27,35,113,0.6),inset_4px_4px_4px_rgba(185,180,255,0.4)]",
-                    "transition-all duration-300"
-                  )}>{t("learnNow")}</Button>
+                  <Link href="/waiting-list" className="w-full">
+                    <Button className={cn(
+                      "w-full rounded-full px-5 py-2 text-sm font-medium",
+                      "bg-linear-to-r from-[#0A0C1C] to-[#1B2371]",
+                      "text-white",
+                      "border border-[#1B2371]",
+                      "shadow-[0px_4px_25px_rgba(27,35,113,0.5),inset_4px_4px_4px_rgba(185,180,255,0.3)]",
+                      "hover:shadow-[0px_6px_30px_rgba(27,35,113,0.6),inset_4px_4px_4px_rgba(185,180,255,0.4)]",
+                      "transition-all duration-300"
+                    )}>{t("tryNow")}</Button>
+                  </Link>
+                  <Link href="/waiting-list" className="w-full">
+                    <Button className={cn(
+                      "w-full rounded-full px-5 py-2 text-sm font-medium",
+                      "bg-linear-to-r from-[#0A0C1F] to-[#CD202F]",
+                      "text-white",
+                      "border border-[#CD202F]",
+                      "shadow-[0px_4px_25px_rgba(27,35,113,0.5),inset_4px_4px_4px_rgba(185,180,255,0.3)]",
+                      "hover:shadow-[0px_6px_30px_rgba(27,35,113,0.6),inset_4px_4px_4px_rgba(185,180,255,0.4)]",
+                      "transition-all duration-300"
+                    )}>{t("learnNow")}</Button>
+                  </Link>
                 </div>
               </div>
             </SheetContent>
