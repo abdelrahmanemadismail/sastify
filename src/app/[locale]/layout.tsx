@@ -4,7 +4,6 @@ import "../globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Header } from "@/components/landing/header";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -45,7 +44,6 @@ export default async function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <Header />
             {children}
           </ThemeProvider>
         </NextIntlClientProvider>

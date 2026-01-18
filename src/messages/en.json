@@ -24,7 +24,7 @@
       "line2": "secure your future"
     },
     "subtitle": "Comprehensive Static Application Security Testing for Safer, Stronger Code",
-    "cta": "Download Now",
+    "cta": "Join Waiting List",
     "stats": {
       "securityBugs": "Security Bugs",
       "realTimeEngine": "Real-time security engine",
@@ -32,6 +32,115 @@
       "highRisk": "High Risk",
       "newVulnerability": "New vulnerability detected",
       "vulnerabilityDetail": "in Module 3"
+    }
+  },
+  "whySastify": {
+    "title": "Why Use SASTify ?",
+    "subtitle": "The Fastest Way to Find, Fix & Prevent Vulnerabilities.",
+    "description": "Unlock advanced, automated security testing built for modern developers.",
+    "features": {
+      "detection": {
+        "title": "Comprehensive Vulnerability Detection",
+        "description": "Automatically identify security vulnerabilities in your source code across multiple programming languages and frameworks. SASTify scans your codebase thoroughly to ensure no security issue goes unnoticed"
+      },
+      "scanning": {
+        "title": "Fast and Accurate Scanning",
+        "description": "Experience lightning-fast analysis with precision. SASTify's advanced algorithms minimize false positives, providing you with accurate results to focus on what truly matters."
+      },
+      "dashboard": {
+        "title": "User-Friendly Dashboard",
+        "description": "Monitor your code's security status with an intuitive and easy-to-navigate dashboard. View detailed reports, track vulnerabilities, and take immediate action, all from one central location."
+      },
+      "reporting": {
+        "title": "Detailed Reporting and Insights",
+        "description": "Gain deep insights into your code's security with comprehensive reports. SASTify provides actionable recommendations to fix vulnerabilities, helping you maintain a strong security posture."
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "How SASTify Work ?",
+    "subtitle": "SASTify Workflow.",
+    "steps": {
+      "upload": {
+        "title": "Upload Your Code File",
+        "description": "Quickly upload your project files - drag & drop or select from your device. SASTify supports multiple languages and file types."
+      },
+      "configure": {
+        "title": "Configure Your Scans",
+        "description": "Set your scan rules, choose the scope, and define the languages or frameworks you want analyzed."
+      },
+      "scan": {
+        "title": "Automated Code Scanning",
+        "description": "SASTify instantly analyzes your entire codebase for vulnerabilities, insecure patterns, and potential risks - all automatically."
+      },
+      "reports": {
+        "title": "Get Detailed Reports",
+        "description": "Receive a clear, structured report with severity levels, affected lines, and actionable recommendations."
+      },
+      "fix": {
+        "title": "Fix & Track Progress",
+        "description": "Use the dashboard to remediate issues, assign tasks to teammates, and monitor fixes in real time."
+      },
+      "track": {
+        "title": "Track Progress in Dashboard",
+        "description": "Get a clear overview of progress, identify patterns, and make informed decisions using real-time dashboard insights."
+      }
+    },
+    "aiPowered": {
+      "badge": "AI-Powered",
+      "title": "AI-Powered Improvement Suggestions",
+      "description": "Our integrated AI doesn't just find vulnerabilities — it suggests how to fix them. Get intelligent, actionable recommendations tailored to your code to improve quality and security faster.",
+      "cta": "Start Securing Smarter",
+      "visual": "AI analyzing your code"
+    }
+  },
+  "learningPlatforms": {
+    "badge": "Learning Platforms",
+    "title": "Level Up Your Secure Coding Skills",
+    "subtitle": "SASTify gives developers more than security tools - it empowers them to learn, experiment, and grow. From guided lessons to real-world exploit scenarios, our learning ecosystem helps you understand vulnerabilities deeply and master how to fix them with confidence.",
+    "cylearn": {
+      "title": "CyLearn Educational Platform - Learn by Doing",
+      "description": "A structured, hands-on learning hub packed with tutorials, guided labs, and interactive exercises that teach how vulnerabilities work from the inside out.",
+      "cta": "Explore Cylearn Learning Hub",
+      "subtitle": "Improve your skills",
+      "hint": "Practice securely"
+    },
+    "vulnplayground": {
+      "title": "VulnPlayground - Learn by Breaking",
+      "description": "A safe sandbox to experiment with intentionally vulnerable code, understand real flaws, and learn to fix them by practicing on real-world scenarios.",
+      "cta": "Try SASTify VulnPlayground",
+      "subtitle": "Break to learn",
+      "hint": "Hack & analyze safely"
+    },
+    "languageSupport": {
+      "badge": "Broad Language Support",
+      "title": "Built for Developers, Designed for Flexibility",
+      "subtitle": "Scan, Detect, and Protect - Across Every Major Programming Language",
+      "more": "And more..."
+    }
+  },
+  "contact": {
+    "title": "Let's make your code safer - together.",
+    "subtitle": "Have questions or need assistance? We're here to help!",
+    "description": "Reach out to the SASTify team for support, inquiries, or feedback.",
+    "namePlaceholder": "Name",
+    "emailPlaceholder": "Email",
+    "subjectPlaceholder": "Subject",
+    "messagePlaceholder": "Message",
+    "submitButton": "Send your message",
+    "submitting": "Sending...",
+    "success": "Thank you! Your message has been sent successfully. We'll get back to you soon.",
+    "errors": {
+      "nameRequired": "Name is required",
+      "nameMinLength": "Name must be at least 2 characters",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Please enter a valid email address",
+      "subjectRequired": "Subject is required",
+      "subjectMinLength": "Subject must be at least 3 characters",
+      "messageRequired": "Message is required",
+      "messageMinLength": "Message must be at least 10 characters",
+      "validationFailed": "Please fix the errors above",
+      "submissionFailed": "Failed to send message. Please try again."
     }
   }
 }

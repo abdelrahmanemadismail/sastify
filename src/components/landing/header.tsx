@@ -56,7 +56,7 @@ export function Header() {
         )}
       >
         {/* Logo Section */}
-        <div className="flex items-center gap-2 flex-shrink-0">
+        <div className="flex items-center gap-2 shrink-0">
           <Link href="/" className="flex items-center gap-2 group/logo transition-all duration-300">
             <div className="relative">
               <LogoIcon className="h-8 w-8 text-white transition-all duration-300 group-hover/logo:scale-110" />
@@ -92,7 +92,7 @@ export function Header() {
               "rounded-full px-5 py-2 text-sm font-medium",
               "w-auto h-auto",
               "flex flex-row justify-center items-center gap-2.5",
-              "bg-gradient-to-r",
+              "bg-linear-to-r",
               "from-[#0A0C1C] to-[#1B2371]",
               "text-white",
               "border border-[#1B2371]",
@@ -110,7 +110,7 @@ export function Header() {
               "rounded-full px-5 py-2 text-sm font-medium",
               "w-auto h-auto",
               "flex flex-row justify-center items-center gap-2.5",
-              "bg-gradient-to-r",
+              "bg-linear-to-r",
               "from-[#0A0C1F] to-[#CD202F]",
               "text-white",
               "border border-[#CD202F]",
@@ -124,7 +124,7 @@ export function Header() {
         </div>
 
         {/* Mobile Menu Trigger */}
-        <div className="lg:hidden flex-shrink-0">
+        <div className="lg:hidden shrink-0">
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="text-gray-700 dark:text-white hover:bg-white/10">
@@ -153,7 +153,7 @@ export function Header() {
                 <div className="flex flex-col gap-4 mt-4 w-full max-w-xs">
                   <Button className={cn(
                     "w-full rounded-full px-5 py-2 text-sm font-medium",
-                    "bg-gradient-to-r from-[#0A0C1C] to-[#1B2371]",
+                    "bg-linear-to-r from-[#0A0C1C] to-[#1B2371]",
                     "text-white",
                     "border border-[#1B2371]",
                     "shadow-[0px_4px_25px_rgba(27,35,113,0.5),inset_4px_4px_4px_rgba(185,180,255,0.3)]",
@@ -162,7 +162,7 @@ export function Header() {
                   )}>{t("tryNow")}</Button>
                   <Button className={cn(
                     "w-full rounded-full px-5 py-2 text-sm font-medium",
-                    "bg-gradient-to-r from-[#0A0C1F] to-[#CD202F]",
+                    "bg-linear-to-r from-[#0A0C1F] to-[#CD202F]",
                     "text-white",
                     "border border-[#CD202F]",
                     "shadow-[0px_4px_25px_rgba(27,35,113,0.5),inset_4px_4px_4px_rgba(185,180,255,0.3)]",

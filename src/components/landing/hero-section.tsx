@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
-import { Download, ArrowRight } from "lucide-react";
+import { Download } from "lucide-react";
 import { motion } from "framer-motion";
 import { DashboardPreview } from "./dashboard-preview";
 
@@ -17,7 +17,7 @@ export function HeroSection() {
         <div className="absolute top-1/3 left-1/3 w-150 h-150 bg-purple-500/10 rounded-full blur-[100px]" />
       </div>
 
-      <div className="w-full h-162.5 mx-auto">
+      <div className="w-full mx-auto">
         {/* Main Content Container with glassmorphism effect */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
