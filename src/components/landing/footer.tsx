@@ -72,7 +72,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="relative w-full overflow-hidden">
+    <footer className="relative w-full overflow-hidden bg-[#0B0121]">
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-linear-to-b from-transparent via-[#0B0121]/50 to-[#0B0121] z-0">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-linear-to-b from-red-500/5 to-transparent rounded-full blur-[120px] opacity-50" />
