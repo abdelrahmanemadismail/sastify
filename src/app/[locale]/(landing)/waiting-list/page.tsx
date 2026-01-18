@@ -19,7 +19,7 @@ export default async function WaitingListPage() {
           <div className="absolute left-1/2 bottom-0 h-64 w-64 -translate-x-1/2 rounded-full bg-red-500/10 blur-[110px]" />
         </div>
 
-        <div className="space-y-24 pb-24 pt-16 md:space-y-28 md:pb-32 md:pt-20">
+        <div className="space-y-24 pb-24 md:space-y-28 md:pb-32 ">
           {/* Hero Section */}
           <WaitingListHero />
 
