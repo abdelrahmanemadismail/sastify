@@ -14,6 +14,8 @@ import {
 } from "@/components/ui/sheet";
 import { LogoIcon } from "@/components/logo/logo-icon";
 import { LogoText } from "@/components/logo/logo-text";
+import { ModeToggle } from "@/components/theme-toggle";
+import { LanguageSwitcher } from "@/components/language-switcher";
 
 export function Header() {
   const t = useTranslations("header");
@@ -47,7 +49,7 @@ export function Header() {
       <div
         className={cn(
           "pointer-events-auto flex flex-row items-center justify-center px-12 py-7 gap-14",
-          "w-full max-w-6xl rounded-full transition-all duration-300",
+          "w-full max-w-7xl rounded-full transition-all duration-300",
           "bg-black/[0.004] backdrop-blur-md",
           "shadow-[0px_4px_25px_rgba(27,35,113,0.5),inset_4px_4px_4px_rgba(185,180,255,0.3)]",
           isScrolled ? "shadow-[0px_6px_35px_rgba(27,35,113,0.6),inset_4px_4px_4px_rgba(185,180,255,0.4)]" : ""
@@ -77,7 +79,13 @@ export function Header() {
         </nav>
 
         {/* Desktop Actions */}
-        <div className="hidden lg:flex items-center gap-6 shrink-0">
+        <div className="hidden lg:flex items-center gap-4 shrink-0">
+          {/* Theme Toggle */}
+          <ModeToggle />
+
+          {/* Language Switcher */}
+          <LanguageSwitcher />
+
           {/* 'Try now' - Blue gradient button from Figma */}
           <Button
             className={cn(
@@ -135,6 +143,13 @@ export function Header() {
                     {link.name}
                   </Link>
                 ))}
+
+                {/* Mobile Theme Toggle and Language Switcher */}
+                <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-200 dark:border-white/10 w-full justify-center">
+                  <ModeToggle />
+                  <LanguageSwitcher />
+                </div>
+
                 <div className="flex flex-col gap-4 mt-4 w-full max-w-xs">
                   <Button className={cn(
                     "w-full rounded-full px-5 py-2 text-sm font-medium",

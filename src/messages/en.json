@@ -16,5 +16,22 @@
   },
   "language": "Language",
   "english": "English",
-  "arabic": "العربية"
+  "arabic": "العربية",
+  "hero": {
+    "trustedBy": "Trusted by Startups",
+    "title": {
+      "line1": "secure your code",
+      "line2": "secure your future"
+    },
+    "subtitle": "Comprehensive Static Application Security Testing for Safer, Stronger Code",
+    "cta": "Download Now",
+    "stats": {
+      "securityBugs": "Security Bugs",
+      "realTimeEngine": "Real-time security engine",
+      "riskScore": "Risk Score",
+      "highRisk": "High Risk",
+      "newVulnerability": "New vulnerability detected",
+      "vulnerabilityDetail": "in Module 3"
+    }
+  }
 }

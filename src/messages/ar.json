@@ -16,5 +16,22 @@
   },
   "language": "اللغة",
   "english": "English",
-  "arabic": "العربية"
+  "arabic": "العربية",
+  "hero": {
+    "trustedBy": "موثوق به من قبل الشركات الناشئة",
+    "title": {
+      "line1": "أمّن كودك",
+      "line2": "أمّن مستقبلك"
+    },
+    "subtitle": "اختبار أمان التطبيقات الثابت الشامل لكود أكثر أمانًا وقوة",
+    "cta": "حمّل الآن",
+    "stats": {
+      "securityBugs": "أخطاء الأمان",
+      "realTimeEngine": "محرك الأمان الفوري",
+      "riskScore": "درجة المخاطر",
+      "highRisk": "مخاطر عالية",
+      "newVulnerability": "تم اكتشاف ثغرة أمنية جديدة",
+      "vulnerabilityDetail": "في الوحدة 3"
+    }
+  }
 }

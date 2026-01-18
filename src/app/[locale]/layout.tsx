@@ -3,8 +3,8 @@ import { Poppins, Tajawal } from "next/font/google";
 import "../globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-import { ThemeProvider } from "@/components/theme-provider"
-import { Header } from "@/components/header"
+import { ThemeProvider } from "@/components/theme-provider";
+import { Header } from "@/components/landing/header";
 
 const poppins = Poppins({
   variable: "--font-poppins",
