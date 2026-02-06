@@ -74,11 +74,11 @@ export function WaitingListForm({ onSuccess }: WaitingListFormProps) {
     setIsLoading(true)
 
     try {
-      // TODO: Replace with actual API endpoint
-      const response = await fetch("/api/waiting-list", {
+      const response = await fetch("https://formspree.io/f/xojljegb", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          Accept: "application/json",
         },
         body: JSON.stringify(formData),
       })
