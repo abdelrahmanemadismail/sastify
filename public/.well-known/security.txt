@@ -1,0 +1,7 @@
+Contact: security@sastify.com
+Contact: https://sastify.com/security
+Expires: 2026-12-31T23:59:59.000Z
+Preferred-Languages: en, ar
+Canonical: https://sastify.com/.well-known/security.txt
+Policy: https://sastify.com/security-policy
+Acknowledgments: https://sastify.com/security-acknowledgments

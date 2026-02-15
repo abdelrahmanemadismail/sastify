@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Sparkles } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 
@@ -5,6 +6,35 @@ import { ScrollToTopButton } from "@/components/scroll-to-top-button"
 import { WaitingListBenefits } from "@/components/waiting-list/waiting-list-benefits"
 import { WaitingListForm } from "@/components/waiting-list/waiting-list-form"
 import { WaitingListHero } from "@/components/waiting-list/waiting-list-hero"
+import { PAGE_METADATA, isValidLocale } from "@/lib/seo-metadata"
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale: rawLocale } = await params;
+  const locale = isValidLocale(rawLocale) ? rawLocale : "en";
+  const metadata = PAGE_METADATA.waitingList[locale];
+
+  return {
+    title: metadata.title,
+    description: metadata.description,
+    keywords: metadata.keywords,
+    openGraph: {
+      title: metadata.title,
+      description: metadata.description,
+      type: "website",
+      url: locale === "ar" ? "https://sastify.com/ar/waiting-list" : "https://sastify.com/waiting-list",
+    },
+    alternates: {
+      canonical:
+        locale === "ar"
+          ? "https://sastify.com/ar/waiting-list"
+          : "https://sastify.com/waiting-list",
+      languages: {
+        en: "https://sastify.com/waiting-list",
+        ar: "https://sastify.com/ar/waiting-list",
+      },
+    },
+  };
+}
 
 export default async function WaitingListPage() {
   const t = await getTranslations("waitingList")

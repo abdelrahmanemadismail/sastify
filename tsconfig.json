@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, ".docs/SEO_IMPLEMENTATION_EXAMPLES.ts"  ],
   "exclude": ["node_modules"]
 }
