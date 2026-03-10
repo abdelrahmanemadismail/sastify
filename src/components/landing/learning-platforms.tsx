@@ -90,6 +90,7 @@ export function LearningPlatforms() {
                       src="/cylearn.png"
                       alt="CyLearn Platform"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 40vw"
                       className="object-cover"
                     />
                   </div>
@@ -147,6 +148,7 @@ export function LearningPlatforms() {
                       src="/vulnPlayground.png"
                       alt="VulnPlayground"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 40vw"
                       className="object-cover"
                     />
                   </div>

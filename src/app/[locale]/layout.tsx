@@ -5,6 +5,8 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeFavicon } from "@/components/theme-favicon";
+import { AuthProvider } from "@/components/auth/AuthProvider";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import { METADATA_BY_LOCALE, isValidLocale } from "@/lib/seo-metadata";
 
 const poppins = Poppins({
@@ -111,17 +113,19 @@ export default async function RootLayout({
       <body
         className={`${poppins.variable} ${tajawal.variable} antialiased ${locale === "ar" ? "font-tajawal" : "font-poppins"}`}
       >
-        <NextIntlClientProvider messages={messages} locale={locale}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <ThemeFavicon />
-            {children}
-          </ThemeProvider>
-        </NextIntlClientProvider>
+        <AuthProvider>
+          <NextIntlClientProvider messages={messages} locale={locale}>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            >
+              <ThemeFavicon />
+              {children}
+            </ThemeProvider>
+          </NextIntlClientProvider>
+        </AuthProvider>
       </body>
     </html>
   );

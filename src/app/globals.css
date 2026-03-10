@@ -25,6 +25,9 @@
   --color-input: var(--input);
   --color-border: var(--border);
   --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
   --color-accent-foreground: var(--accent-foreground);
   --color-accent: var(--accent);
   --color-muted-foreground: var(--muted-foreground);
@@ -113,6 +116,10 @@
   --destructive: #cd202f;       /* red-500 */
   --destructive-foreground: #ffffff;
 
+  /* Success */
+  --success: #16a34a;           /* green-600 */
+  --success-foreground: #ffffff;
+
   /* Borders & Inputs */
   --border: #b8bdcf;            /* blue-100 */
   --input: #b8bdcf;
@@ -170,6 +177,10 @@
   /* Destructive */
   --destructive: #cd202f;       /* red-500 */
   --destructive-foreground: #ffffff;
+
+  /* Success */
+  --success: #16a34a;           /* green-600 */
+  --success-foreground: #ffffff;
 
   /* Borders & Inputs */
   --border: #19275c;            /* blue-600 */

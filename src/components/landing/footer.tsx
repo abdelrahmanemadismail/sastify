@@ -6,8 +6,7 @@ import { useTranslations } from "next-intl";
 import { Mail, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { LogoIcon } from "@/components/logo/logo-icon";
-import { LogoText } from "@/components/logo/logo-text";
+import { Logo } from "@/components/logo";
 import { motion } from "framer-motion";
 
 export function Footer() {
@@ -98,10 +97,7 @@ export function Footer() {
         {/* Left Section - Logo, Social, Copyright */}
         <motion.div variants={itemVariants} className="flex flex-col items-center lg:items-start gap-8 shrink-0">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group/logo transition-all duration-300 hover:scale-105">
-            <LogoIcon className="h-8 w-8 text-white transition-all duration-300 group-hover/logo:scale-110" />
-            <LogoText className="h-8 transition-all duration-300 group-hover/logo:opacity-80" />
-          </Link>
+          <Logo className="hover:scale-105" />
 
           {/* Social Links with hover effects */}
           <div className="flex gap-3">
